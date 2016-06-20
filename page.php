@@ -5,6 +5,8 @@
     $controller = new Controller();
 ?>
 
+<?php include_once "includes/processForms/newProduct.php"; ?>
+
 <?php include_once "includes/layout/header.php"; // Include header ?>
     <?php include_once "includes/layout/nav.php"; // Include navigation ?>
 
@@ -49,7 +51,8 @@
         <span class="glyphicon glyphicon-plus"></span> Mätning
     </a>
 
-    <?php include_once "includes/processForms/newProduct.php"; ?>
+    <br/>
+    <br/>
 
     <div class="collapse" id="collapseExample">
         <div class="well">
@@ -77,7 +80,7 @@
 
             if($i == count($products) - 1){
                 // Last one show all graph in one
-                
+
             }
         }
 

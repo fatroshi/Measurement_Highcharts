@@ -111,7 +111,7 @@ class Subject extends Database{
      * @return bool true if the item was saved in db
      */
     public function addItem($subject_id,$itemName,$info){
-        if(!$this->itemExists($itemName)){
+        //if(!$this->itemExists($itemName)){
 
             $sql = "INSERT INTO items (subject_id,itemName,info,published) VALUES ('{$subject_id}','{$itemName}','{$info}', CURRENT_TIMESTAMP )";
             if (mysqli_query($this->connection, $sql)) {
@@ -121,7 +121,7 @@ class Subject extends Database{
                 echo "<span class='text-danger>" . "<hr> Error: " . $sql . "<br>" . mysqli_error($this->connection) . "</span>";
                 return false;
             }
-        }
+        //}
     }
 
 

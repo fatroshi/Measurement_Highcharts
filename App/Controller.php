@@ -104,7 +104,7 @@ class Controller {
      */
     public function redirect($newURL){
         header("Location: " . $newURL);
-        die();
+        //die();
     }
 
     /**
