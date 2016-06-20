@@ -1,3 +1,5 @@
+<?php include_once "includes/auth.php"; ?>
+
 <?php
     include_once "App/Controller.php"; // Include Controller
     include_once "App/Upload.php"; // Include upload
