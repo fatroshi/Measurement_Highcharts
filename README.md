@@ -1,10 +1,12 @@
 # Measurements with Highcharts
-## Project
+## About the project
 An embedded system was created for audiotransmission in a wireless network.
 
 A Carambola 2/ RPI 2 and Gstreamer were used for transmitting the audio, an Arduino UNO was 
 
 used for measuring the total delay in the system, from sender to receiver.  
+
+The measurements were stored in a .txt file.
 
 ## About the website
 Website (CMS) for uploading .txt files containing measurements.
