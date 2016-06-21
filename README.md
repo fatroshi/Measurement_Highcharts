@@ -17,6 +17,7 @@ Each new line is a measurement.
 - MySQL
 - PHP
 - JavaScript
+- jQuery
 - CSS Botstrap
 - Highcharts
 - HTML
