@@ -13,4 +13,12 @@ Measurements can be added for each subpage.
 
 Each new line is a measurement.
 
+### About the system
+- MySql
+- PHP
+- JavaScript
+- CSS Botstrap
+- Highcharts
+- HTML
+
 
