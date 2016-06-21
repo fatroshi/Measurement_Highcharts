@@ -14,7 +14,7 @@ Measurements can be added for each subpage.
 Each new line is a measurement.
 
 ### Created with:
-- MySql
+- MySQL
 - PHP
 - JavaScript
 - CSS Botstrap
