@@ -1,5 +1,3 @@
-<?php include_once "includes/auth.php"; ?>
-
 <?php
     include_once "App/Controller.php"; // Include Controller
     include_once "App/Upload.php"; // Include upload
@@ -36,8 +34,9 @@
     <h3>
         <?php
             echo $page['itemName'];
-            echo "<a href=\"remove.php?subject_id={$id}&page={$page_id}&remove=page\"> <span class=\"glyphicon glyphicon-trash\"></span></a></li>";
-
+            if(isset($_SESSION['user'])){
+                echo "<a href=\"remove.php?subject_id={$id}&page={$page_id}&remove=page\"> <span class=\"glyphicon glyphicon-trash\"></span></a></li>";
+            }
         ?>
     </h3>
 
@@ -48,10 +47,14 @@
         ?>
     </div>
 
+    <?php
+    if(isset($_SESSION['user'])) {
+        echo "    <a class=\"btn btn-primary\" role=\"button\" data-toggle=\"collapse\" href=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
+        <span class=\"glyphicon glyphicon-plus\"></span> Mätning
+    </a>";
+    }
+    ?>
 
-    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        <span class="glyphicon glyphicon-plus"></span> Mätning
-    </a>
 
     <br/>
     <br/>
@@ -71,7 +74,9 @@
                     // Link to txt file
                     echo "<a href='{$products[$i][3]}'>{$products[$i][1]}</a>";
                     // Remove product and file
-                    echo "<a href='remove.php?subject_id={$subject_id}&page={$page_id}&product_id={$products[$i][0]}&remove=product'> <span class='glyphicon glyphicon-trash'></span> </a>";
+                    if(isset($_SESSION['user'])) {
+                        echo "<a href='remove.php?subject_id={$subject_id}&page={$page_id}&product_id={$products[$i][0]}&remove=product'> <span class='glyphicon glyphicon-trash'></span> </a>";
+                    }
                 echo "</h4>";
                 echo nl2br($products[$i][2]) . "<BR/>";
 
