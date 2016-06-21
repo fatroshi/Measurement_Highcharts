@@ -1,7 +1,7 @@
 <div class="container well">
 <nav >
     <div id="navbar" class="collapse navbar-collapse ">
-        <ul class="nav nav-justified">
+        <ul class="nav nav-tabs">
                 <?php
                 // Get all subjects
                 $subjects = $controller->allSubjects();
@@ -25,17 +25,22 @@
                                     $output .= "</li>";
                                 }
 
-                                $output .= "<li role=\"presentation\" class=\"divider\"></li>";
-                                $output .= "<li><a href=\"newItem.php?subject_id={$id}\"><span class=\"glyphicon glyphicon-plus\"></span> Sida</a></li>";
-                                $output .= "<li role=\"presentation\" class=\"divider\"></li>";
-                                $output .= "<li><a href=\"remove.php?subject_id={$id}&remove=subject\"><span class=\"glyphicon glyphicon-trash\"></span> " . $name . " </a></li>";
+                                if(isset($_SESSION['user'])) {
+                                    $output .= "<li role=\"presentation\" class=\"divider\"></li>";
+                                    $output .= "<li><a href=\"newItem.php?subject_id={$id}\"><span class=\"glyphicon glyphicon-plus\"></span> Sida</a></li>";
+                                    $output .= "<li role=\"presentation\" class=\"divider\"></li>";
+                                    $output .= "<li><a href=\"remove.php?subject_id={$id}&remove=subject\"><span class=\"glyphicon glyphicon-trash\"></span> " . $name . " </a></li>";
+                                }
                             $output .="</ul>";
                         $output .= "</div>";
                     $output .= "</li>"; // END ALL SUBJECTS
                 }
                 echo $output;
+
+                if(isset($_SESSION['user'])) {
+                    echo "<li><a class=\"btn btn-default \" href=\"newSubject.php\"><span class=\"glyphicut glyphicon-plus\"></span> Ämne</a></li>";
+                }
                 ?>
-                <li><a class="btn btn-default " href="newSubject.php"><span class="glyphicut glyphicon-plus"></span> Ämne</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
