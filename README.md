@@ -1,6 +1,6 @@
 # Measurements with Highcharts
 ## Project
-An embedded system was created for sending audiotransmission in a wireless network.
+An embedded system was created for audiotransmission in a wireless network.
 
 Carambola 2/ RPI 2 and Gstreamer were used for transmitting the audio, Arduino UNO was 
 
