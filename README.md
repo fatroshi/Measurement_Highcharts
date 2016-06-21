@@ -1,4 +1,4 @@
-# Measurement_Highcharts
+# Measurements with Highcharts
 CMS with for uploading .txt files containing measurements.
 The data is stored in a database and displayed in a Highcharts graph.
 
