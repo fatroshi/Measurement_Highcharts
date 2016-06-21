@@ -7,16 +7,20 @@ Measurements can be added for each subpage.
 
 ## Delay.sql
 The file contains all tables and records.
-#### For login
+#### For login:
 Username = Farhad
 
 Password = Atroshi
 
 ###Example of a .txt file:
-123 \n
-321 \n
-213 \n
+123
+
+321
+
+213
+
 ...
+
 
 Each new line is a measurement.
 
