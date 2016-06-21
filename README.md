@@ -6,9 +6,9 @@ The user can create categories and add subpages.
 Measurements can be added for each subpage.
 
 ##Example of a .txt file:
-123
-321
-213
+123 \n
+321 \n
+213 \n
 ...
 
 Each new line is a measurement.
