@@ -2,7 +2,7 @@
 /**
  * Class is used for login the user and getting user info from the database
  */
-include_once("includes/DB/Database.php");
+include_once("App/Database.php");
 class User extends Database {
     private $connection;
     function __construct($connection) {
@@ -17,7 +17,7 @@ class User extends Database {
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["email"]. "<br>";
+                echo "id: " . $row["id"]. " - Name: " . $row["username"]. "<br>";
             }
         } else {
             echo "0 results";

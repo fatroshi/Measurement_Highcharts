@@ -61,7 +61,7 @@ class Graph
     }
 
     public function createGraph($product_id,$id){
-        $output = "<div id=\"{$id}\" style=\"width: 100%; height: 400px; margin: 0 auto\"></div>
+        $output = "<div id=\"{$id}\" class='thumbnail' style=\"width: 100%; height: 400px; margin: 0 auto\"></div>
 <script language=\"JavaScript\">
     $(document).ready(function() {
         var title = {

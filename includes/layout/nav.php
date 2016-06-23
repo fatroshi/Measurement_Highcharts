@@ -38,7 +38,8 @@
                 echo $output;
 
                 if(isset($_SESSION['user'])) {
-                    echo "<li><a class=\"btn btn-default \" href=\"newSubject.php\"><span class=\"glyphicut glyphicon-plus\"></span> Ämne</a></li>";
+                    echo "<BR/><BR/>";
+                    echo "<li><a class=\"btn btn-success \" href=\"newSubject.php\"><span class=\"glyphicut glyphicon-plus\"></span> Ämne</a></li>";
                 }
                 ?>
             </ul>

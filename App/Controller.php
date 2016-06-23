@@ -1,5 +1,6 @@
 <?php
 include_once "App/Database.php";
+include_once "App/User.php";
 include_once "App/subject.php";
 include_once "App/Graph.php";
 
@@ -12,12 +13,12 @@ include_once "App/Graph.php";
 class Controller {
 
     private $database;
-    //private $user;
+    private $user;
     private $Subject;
 
     function __construct() {
         $this->database = new Database();                                       // Connect to the database
-        //$this->user     = new User($this->database->getConnection());
+        $this->user     = new User($this->database->getConnection());
         $this->Subject = new Subject($this->database->getConnection());
     }
 
